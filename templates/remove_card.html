@@ -3,14 +3,17 @@
 {% block title %}Remove Flash Card{% endblock %}
 
 {% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='button.css') }}">
+
     <h1>Remove Flash Card<h1>
     Question: {{ card.question }} <br>
     Answer: {{ card.answer }}
 
     <h2>Are you sure?</h2>
     <form method="post">
-        <button type="submit">Yes</button>
-        <a href="{{ url_for('welcome') }}">No</a>
+        <button type="submit" class="buttonx" style="background-color: deeppink">Yes</button>
+         <a href="{{ url_for('welcome') }}" class="button4" style="background-color: chartreuse">No</a>
     </form>
 
 {% endblock %}
